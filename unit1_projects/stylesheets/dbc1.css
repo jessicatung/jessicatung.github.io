@@ -1,0 +1,36 @@
+.blue{
+	color:blue;
+	font-family: 'Helvetica';
+}
+
+p{
+	color: fuchsia;
+	font-family: Arial;
+}
+
+#special{
+	color:red;
+}
+
+h1{
+	color:lime;
+	background-color: black;
+}
+
+h6{
+	color:teal;
+	font-size: 14px;
+}
+
+.black{
+	background-color: aqua;
+	font-size: 20px;
+}
+
+.purple{
+	color: purple;
+}
+
+.navy{
+	color: navy;
+}
