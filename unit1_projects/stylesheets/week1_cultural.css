@@ -1,0 +1,15 @@
+container {
+	width: 960px;
+	margin: auto;
+}
+
+h1{
+	text-align: center;
+	color: fuchsia;
+	background-color: black;
+}
+
+h2{
+	text-align: center;
+	color: teal;
+}
