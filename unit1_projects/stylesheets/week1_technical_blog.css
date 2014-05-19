@@ -1,0 +1,27 @@
+container {
+	width: 960px;
+	margin: auto;
+}
+
+h1{
+	text-align: center;
+	color: fuchsia;
+	background-color: black;
+}
+
+h2{
+	text-align: center;
+	color: teal;
+}
+
+.image{
+	text-align: center;
+	margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+a:link{color:blue;}
+a:visited{color:purple;}
+a:hover{color:fuchsia;}
+a:active{color:lime;}
