@@ -1,0 +1,38 @@
+body{
+	font-family: arial;
+	background-image: url(images/tree_bark.png);
+}
+
+header{
+	text-align: center;
+	color: fuchsia;
+	background-color: teal;
+}
+article {
+	width: 960px;
+	margin: auto;
+}
+
+aside{
+	float: left;
+	max-width: 30%;
+	font-size: 14px;
+}
+
+.name{
+	font-size:18px;
+	font-weight: bold;
+	color: teal;
+}
+
+section{
+	float: right;
+	max-width: 70%;
+	}
+
+footer{
+	clear:both;
+	text-align: center;
+	border-top: 6px solid fuchsia;
+}
+
