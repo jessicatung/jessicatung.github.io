@@ -1,17 +1,21 @@
+/* stuff that affects the entire doc's format*/
 body{
 	font-family: arial;
 	background-image: url(images/tree_bark.png);
-}
-
-header{
-	text-align: center;
-	color: fuchsia;
-	background-color: teal;
 }
 article {
 	width: 960px;
 	margin: auto;
 }
+/* header stuff */
+
+header{
+	text-align: center;
+	color: fuchsia;
+	font-family: 'Lobster', cursive;
+}
+
+/* sidebar stuff */
 
 aside{
 	float: left;
@@ -21,10 +25,12 @@ aside{
 
 .name{
 	font-size:18px;
+	font-family: 'Lobster', cursive;
 	font-weight: bold;
 	color: teal;
 }
 
+/* content */
 section{
 	float: right;
 	max-width: 70%;
