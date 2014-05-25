@@ -1,0 +1,66 @@
+<head>
+		<title> Week 2 Technical Blog </title>
+		<link rel="stylesheet" type="text/css" href= "stylesheets/week2_technical.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<article>
+
+		<header>
+			<h1>Margin vs. Border vs. Padding</h1>
+		</header>
+
+		<aside>
+			<p class="name">Jessica Tung</p>
+			<p class="sidebar_text">DBC - SF Mule Deer, July 2014</p>
+			<p class="sidebar_text">Oakland, California</p>
+		</aside>	
+
+		<section>
+			<p class="date">May 24, 2014</p>
+
+			<p>All visual HTML elements generate a box which is called an "element box." In CSS, the design and layout in regards to this box is referred to as the "box model." You can think of this CSS box model as a multi-layered box that wraps around HTML elements, and consists of content, padding, borders, margins.</p> 
+
+			<p>By default, element boxes have only a small amount of space surrounding the content inside that element box. But! One can manipulate that amount of space by adjusting the margins and padding. The border is what separates the padding from the margin. </p>
+
+			<p>The quickest and easiest way to conceptualize padding, borders, and margins is to see a graphical representation:</p>
+
+			<img src="http://www.w3.org/wiki/images/7/7a/Layout_fig1.png">
+			<p class = caption>(Image courtesy of www.w3.org)</p>
+
+			<p>Let's examine each layer of the box model, starting with the middle of the box, and move our way outwards.</p>
+
+		<h2> Content </h2>
+			<p> This is the text/images, the content of the box! In the picture above, the content is the latin words beginning with "Lorem ipsum..." 
+			</p>
+
+		<h2> Padding </h2>
+			<p> Moving one layer out from the content, the padding is what clears an area around the content, it adds some space around the content. To look at it another way, padding adds extra space inside the border, between the border and the content.Padding will show the background color of the box, if applicable.
+			</p>
+
+		<h2> Border </h2>
+			<p> Adding another layer is the border. The border is what goes around the padding and content. Most elements do not have borders by default, but they are easy to add via css properties! Borders can add visual interest, you can specify the width or color of a border, as well as the style (solid, dashed, dotted, etc.) 
+			</p>
+
+		<h2> Margin </h2>
+			<p> The next layer, moving outwards, is the margin. Margins clear an area around the border. In other words, margins add extra space outside the border. Unlike the padding, margins are not affected by the background color, but are transparent. 
+			</p>
+
+		<h2> Other helpful resources: </h2>
+			<p> <ul>
+				<li><a href="http://www.goer.org/HTML/intermediate/borders/">More on borders</a></li>
+				<li><a href="http://www.goer.org/HTML/intermediate/margins_and_padding/">More on margins and padding</a></li>
+				<li><a href="http://www.w3schools.com/css/css_boxmodel.asp">CSS Box Model</a></li>
+
+			</ul>
+			</p>
+
+		</section>
+
+		<footer>
+			<p>&copy; Jessica Tung</p>
+		</footer>
+
+	</article>
+	</body>	
+</html>
