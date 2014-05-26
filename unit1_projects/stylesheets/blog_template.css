@@ -19,7 +19,7 @@ header{
 	text-align: center;
 	color: fuchsia;
 	background-color: #A2ADD0;
-	font-family: 'Lobster', cursive;
+	font-family: 'Playfair Display SC', serif;
 }
 
 /* sidebar stuff */
@@ -58,5 +58,19 @@ footer{
 	clear:both;
 	text-align: center;
 	border-top: 6px solid fuchsia;
+}
+
+/* Misc for images and captions */
+
+.caption{
+	font-size: 12px;
+	text-align: center;
+}
+
+img{
+	display:  block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
 }
 
