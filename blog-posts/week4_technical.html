@@ -1,0 +1,116 @@
+<head>
+		<title> Ruby Loops </title>
+		<link rel="stylesheet" type="text/css" href= "stylesheets/blog_template.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<article>
+
+		<header>
+			<h1>Jessica's Dev Bootcamp Blog</h1>
+		</header>
+
+		<aside>
+			<p class="name">Jessica Tung</p>
+			<p class="sidebar_text">DBC - SF Mule Deer, July 2014</p>
+			<p class="sidebar_text">Oakland, California</p>
+		</aside>	
+
+		<section>
+		<p class="date">June 6, 2014</p>
+
+		<h2> Ruby Loops! </h2>
+			<p>Loops are used to execute the same block of code multiple times. There are many different types of loops in ruby. This blog post will aim to explain the common types of ruby loops a bit, and perhaps shed some light on when to use each type. 
+			</p>
+
+			<h3> While </h3>
+			<p> The while loop executes a code block <strong>while</strong> a given condition is true. In other words, the loop keeps going while some condition is still true, and stops once the condition becomes false. So, use a while loop when you want to execute a block of code over and over again, until some condition becomes false!
+			</p>
+			<pre><code>
+x = 10 
+while x > 0 
+  x -=1 
+  puts "This loop will execute #{x} more times!" 
+end
+
+# This loop will execute 9 more times!
+# This loop will execute 8 more times!
+# ...
+# This loop will execute 0 more times!
+			</code></pre>
+			<p> Be careful to make sure that the condition WILL become false, or else you've got yourself an infinite loop and that is no bueno. In the above example, if you didn't decrement the x var by -1, the interpreter would just run the code... forever. Or until your OS killed itself :) 
+			</p>
+
+			<h3> Until </h3>
+			<p> The until loop is complementary to the while loop, it's basically the backwards version of while. An until loop will execute a code block as long as the condition is <em>false</em>. In other words, the loop keeps going <strong>until</strong> the condition is true. Hence, an until loop is useful when you want to execute a block of code over and over again, until some condition becomes true!
+			</p>
+			<pre><code>
+x = 10 
+until x == 0 
+  x -=1 
+  puts "This loop will execute #{x} more times!" 
+end
+
+# This loop will execute 9 more times!
+# This loop will execute 8 more times!
+# ...
+# This loop will execute 0 more times!
+			</code></pre>
+			<p> Watch for infinite loops here too! That decrementer line of code is necessary, just like it was in the while loop. 
+			</p>
+
+			<h3> Loop </h3>
+			<p>In while and until loops, we saw a way to repeat an action in ruby. It is also possible to do this using an iterator. What is an iterator? An iterator is a ruby method that repeatedly invokes a block of code. The loop method is a simple iterator that performs unconditional looping. A loop method could be useful if you wanted to execute a block of code repeatedly, and not based on whether a condition is true or false.
+			</p>
+			<pre><code>
+i = 10
+loop {
+  puts "I love bacon!"
+  i -= 1
+  break if i <= 0
+}
+
+# I love bacon!
+# Prints out "I love bacon!" 9 more times. Because you are a bacon monster.
+			</code></pre>
+			<p> Notice the break condition. This is to prevent the horror of an infinite loop!
+			</p>
+
+			<h3> Times </h3>
+			<p> The .times method is an iterator which executes code a specified number of times. It can be called on a number (such as the example below, 10.times) or on a variable containing a number (ex: num = 10 => call with num.times). 
+			</p>
+			<pre><code>
+10.times {puts "I love bacon!"}
+
+# This also prints out "I love bacon!" 10 times! So easy right?
+			</code></pre>
+			<p> As seen above, the .times method really shines when you know <em>exactly</em> how many times you want to execute a loop. 
+			</p>
+
+			<h3> Each </h3>
+			<p> The .each method is an extremely useful iterator, which can apply code to each element of an object, one at a time. The syntax is:
+			<code> object.each{|item| #code to apply }</code>
+			</p>
+			<pre><code>
+names = ["Ozzy Osbourne", "Tommy Iommi", "Geezer Butler", "Bill Ward"]
+
+names.each {|n| puts "#{n} was a member of Black Sabbath."}
+
+# Ozzy Osbourne was a member of Black Sabbath.
+# Tommy Iommi was a member of Black Sabbath.
+# Geezer Butler was a member of Black Sabbath.
+# Bill Ward was a member of Black Sabbath.
+			</code></pre>
+			<p> As seen in the example above, the .each method is extremely useful when you have an array of elements, and want to apply the same code to each of those elements!
+			</p>
+
+		</section>
+
+		<footer>
+			<p>&copy; Jessica Tung</p>
+		</footer>
+
+	</article>
+	</body>	
+</html>
