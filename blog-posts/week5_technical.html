@@ -1,0 +1,110 @@
+<head>
+		<title> Ruby Classes </title>
+		<link rel="stylesheet" type="text/css" href= "stylesheets/blog_template.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<article>
+
+		<header>
+			<h1>Jessica's Dev Bootcamp Blog</h1>
+		</header>
+
+		<aside>
+			<p class="name">Jessica Tung</p>
+			<p class="sidebar_text">DBC - SF Mule Deer, July 2014</p>
+			<p class="sidebar_text">Oakland, California</p>
+		</aside>	
+
+		<section>
+		<p class="date">June 15, 2014</p>
+
+		<h2> A Little About Ruby Classes! </h2>
+			<p> As you may already know, Ruby is an object oriented programming language. An object-oriented program involves both classes and objects. A class is essentially a blueprint, and you can create individual objects with these blueprints! 
+			</p>
+
+			<p>Let's take an example, shall we? Say we have a band. Now, in object-oriented terms, we'd say that our band is an instance of the class of objects known as bands. Bands can have many diffferent characteristics that form the data members of the class Bands. Bands can have a singer, a guitarist, a bassist, a drummer, a genre type, substance abuse issues... wait, scratch that last one. You get my drift. You can distinguish one band from another with the help of these characteristics. What's cool is that you can define a class as a combination of characteristics!</p>
+
+			<p>Since we are already on a roll, let's go ahead and create a Ruby class, instance variables, and instance methods, based on this example.</p>
+
+			<h3> Create a New Class </h3>
+			<p>We can start off by first taking a look at HOW we create a new class.</p>
+			<pre><code>
+class Band
+end
+			</code></pre>
+			<p>Wasn't that easy? The keyword class is followed by the name of the class (note: the name of the class should be capitalized!). Now let's move onto something with more substance. </p>
+
+			<h3> Instance Methods and Instance Variables</h3>
+			<p>We want to set up the class so that it takes in 6 different characteristics for each band (name, singer, guitarist, bassist, drummer, genre). We pass those characteristics into the class by making an initialize method (an instance method), which will take these characteristics in as parameters and assign them to instance variables.  </p>
+
+			<pre><code>
+class Band
+  def initialize (name, singer, guitarist, bassist, drummer, genre)
+    @name = name
+  	@singer = singer
+  	@guitarist = guitarist
+  	@bassist = bassist
+  	@drummer = drummer
+  	@genre = genre
+  end
+end
+			</code></pre>
+
+			<p>See the @ symbols? They indicate that the variable they precede is an Instance Variable, which is a variable that can be accessed across methods for any particular object. We can access these instance variables across methods in this class, which is something we would NOT be able to do with a mere local variable (a variable not preceded by the @ symbol, which can ONLY be accessed within the method in which it was assigned). To illustrate, let's continue with our example.  </p>
+
+			<p>Let's say that we want a method that will introduce the band, based on the characteristics we plug in when we call that method. We could do this by creating an instance method, intro. </p>
+
+			<pre><code>
+class Band
+  def initialize (name, singer, guitarist, bassist, drummer, genre)
+  	@name = name
+  	@singer = singer
+  	@guitarist = guitarist
+  	@bassist = bassist
+  	@drummer = drummer
+  	@genre = genre
+  end
+
+  def intro
+  	p "Are you ready to ROCK?! Tonight we have #{@name} on stage! #{@singer} is gonna 
+  	wail you into oblivion, #{@guitarist} is gonna shred your face off, #{@bassist} 
+  	is gonna slappa da bass, and #{@drummer} is gonna pound out a beastly groove. 
+  	They're your favorite #{@genre} band, and they're here to play for you tonight, 
+  	let's hear it for #{@name}!!!"
+  end
+end
+			</code></pre>
+			<p>See how the intro method can use the instance variables @name, @guitarist, etc even though they were assigned back in the initialize method? That's the magic of instance variables! These instance variables are accessible ACROSS these different methods, inside the class. Pretty neat. </p>
+			<p>Now, what's this business with these "instance variables" and "instant methods"? I've shown you how they WORK, but maybe you're wondering how to understand them conceptually. Maybe this will help: rubylearning.com describes them thusly: when you design a class, think about the objects that will be created from that class type. Think about the things the object <strong>knows</strong> and the things the object <strong>does</strong>. Things an object <strong>knows</strong> about itself are the instance variables, they represent the object's state - in our example, the band name, the genre, etc. Things an object can <strong>do</strong> are called the methods -in our example, the intro method that introduces the band.</p>
+
+
+			<h3> Create a New Object </h3>
+			<p>Ok, so far so good. Now, in order to USE the methods we created within the class, we need to create an instance of this class. Here's how we do that: </p>
+
+ 			<p>The following line of code creates a new object "black_sabbath" using our class, Band. The parameters we passed in here are thus assigned to the instance variables in the class. So, @name = "Black Sabbath", @singer = "Ozzy", etc. </P>
+
+ 			<pre><code>
+black_sabbath = Band.new("Black Sabbath", "Ozzy", "Iommi", "Geezer", "Bill", "heavy metal")
+			</code></pre>
+
+			<p>Then, we call the intro method on the object we just created.</p>
+
+			<pre><code>
+black_sabbath.intro
+			</code></pre>
+			
+			<p>The results of calling black_sabbath.intro? What gets printed onto the screen is:</p>
+			<p> "Are you ready to ROCK?! Tonight we have Black Sabbath on stage! Ozzy is gonna wail you into oblivion, Iommi is gonna shred your face off, Geezer is gonna slappa da bass, and Bill is gonna pound out a beastly groove. They're your favorite heavy metal band, and they're here to play for you tonight, let's hear it for Black Sabbath!!!"</p>
+
+
+		</section>
+
+		<footer>
+			<p>&copy; Jessica Tung</p>
+		</footer>
+
+	</article>
+	</body>	
+</html>
