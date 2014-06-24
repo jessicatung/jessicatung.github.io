@@ -1,0 +1,166 @@
+<head>
+		<title> Ruby Variables </title>
+		<link rel="stylesheet" type="text/css" href= "stylesheets/blog_template.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+</head>
+	<body>
+		<article>
+
+		<header>
+			<h1>Jessica's Dev Bootcamp Blog</h1>
+		</header>
+
+		<aside>
+			<p class="name">Jessica Tung</p>
+			<p class="sidebar_text">DBC - SF Mule Deer, July 2014</p>
+			<p class="sidebar_text">Oakland, California</p>
+		</aside>	
+
+		<section>
+		<p class="date">June 22, 2014</p>
+
+		<h2> Ruby Variable Varietals! </h2>
+
+
+			<p> Ruby supports five different types of variables. Variables are the memory locations in a program which hold the data that's going to be used in the program. The 5 different variable types are: local variables, global variables, instance variables, class variables, and constants. 
+			</p>
+			
+			<h3>Local Variables</h3>
+			<p> If you have some beginner experience with ruby variables, local variables are the type you are likely familiar with! They were the only types of variables I knew of, until I was recently introduced to the other types. Basically, local variables can only be accessed within wherever they were created. They are local to the code construct in which they are declared. So, a scope of a local variable is within a class, module, def, or from do to the corresponding end, or within a block {}. As for naming convention, local variables begin with a lowercase letter or _. 
+			</p>
+			<pre class="prettyprint">
+greeting = "Hello!"
+puts greeting
+
+# => "Hello!"
+
+def new_greeting
+  salutations = "Hi!"
+  puts salutations		
+  puts greeting 	 		
+end
+
+new_greeting
+# => Hi!   - no issue here, salutations is defined within new_greeting method
+# Error will be raised when method tries to puts greeting - greeting is not  
+# accessible within the new_greeting method!
+
+puts salutations
+# Error will be raised here as well, salutations is not accesible outside the 
+# new_greeting method in which it was defined. 
+			</pre>
+
+			<h3>Global Variables</h3>
+			<p> If you want a single variable to be available across the program, then you need a global variable. They can be accessed across classes, modules, etc. the works, but they can also be changed from anywhere too, so proceed with caution. Global variables are preceded by the dollar sign $. 
+			</p>
+
+			<pre class="prettyprint">
+$greeting = "Hi there!"
+
+def new_greeting
+  puts $greeting
+end
+
+new_greeting
+# => Hi there! 
+# Here, new_greeting has no problem accessing $greeting within the 
+# new_greeting method, since it is a global variable. 
+			</pre>
+
+			<h3>Instance Variables</h3>
+		
+
+			<p> Instance Variables are variables that can be accessed across methods for any particular object in a class. This means that instance variables change from object to object. As far as naming conventions, instance variables are preceded by the at sign @. 
+			</p>
+
+			<pre class="prettyprint">
+class Instrument
+  def initialize(kind)
+    @kind = kind
+  end
+
+  def show_kind
+    puts @kind
+  end
+end
+
+bass = Instrument.new("Bass")
+bass.show_kind
+# => Bass
+
+drums = Instrument.new("Drums")
+drums.show_kind
+# => Drums
+			</pre>
+			<p>As you can see, the value stored in @kind changes for each object of the class you create. </p>
+
+			<h3>Class Variables</h3>
+			<p>Class Variables are available across different objects in a class. They are shared amongst all instances of a class. Class variables are preceded by at-at signs (not the Star Wars kind...sadly) @@. 
+			</p>
+			<pre class="prettyprint">
+class Instrument
+  @@instruments_count = 0
+
+  def initialize(kind)
+    @kind = kind
+    @@instruments_count += 1
+  end
+
+  def self.instruments_count
+    @@instruments_count
+  end
+end
+
+Instrument.new("Bass")
+Instrument.new("Guitar")
+Instrument.new("Drums")
+
+p Instrument.instruments_count
+#=> 3
+			</pre>
+			<p>This example illustrates that class variables can store data that belongs to a class.</p>
+
+			<h3>Constants</h3>
+			<p> Constants aren't really variables, rather they hold values that don't change. Constants which are defined within a class or module can be accessed from within that class or module, and those defined outside a class or module can be accessed globally. Constants may NOT be defined within methods. If you try to assign to a constant that is already initialized, you will get a warning! For naming convention, constants are in all caps.
+			</p>
+			<pre class="prettyprint">
+PYTHAGORAS = "square root of two"
+
+class Example
+  GOLDEN = 1.61803
+    def display
+      puts PYTHAGORAS
+      puts GOLDEN
+    end
+end
+
+example_1 = Example.new
+example_1.display
+# => square root of two - PYTHAGORAS is accessible globally 
+# => 1.61803
+
+puts PYTHAGORAS
+#=> square root of two
+# Again, since you defined PYTHAGORAS constant outside the class, 
+# it can be accessed globally. Above, it was accessed within Example method
+# and here it is accessed outside of it.
+
+puts GOLDEN
+# Error - unitialized constant GOLDEN (NameError)
+# You can't access GOLDEN constant outside the class you defined it in.
+			</pre>
+			<p> 
+			</p>
+
+
+		</section>
+
+		<footer>
+			<p>&copy; Jessica Tung</p>
+		</footer>
+
+	</article>
+	</body>	
+</html>
