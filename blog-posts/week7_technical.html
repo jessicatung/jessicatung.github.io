@@ -1,0 +1,55 @@
+<head>
+		<title> SQL Injection </title>
+		<link rel="stylesheet" type="text/css" href= "stylesheets/blog_template.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<article>
+
+		<header>
+			<h1>Jessica's Dev Bootcamp Blog</h1>
+		</header>
+
+		<aside>
+			<p class="name">Jessica Tung</p>
+			<p class="sidebar_text">DBC - SF Mule Deer, July 2014</p>
+			<p class="sidebar_text">Oakland, California</p>
+		</aside>	
+
+		<section>
+		<p class="date">June 29, 2014</p>
+
+		<img src="http://media.tumblr.com/b5ae76c4f7f9ca3732eec9d19a5d5663/tumblr_inline_mugyqbcTcZ1qclfey.jpg"/>
+		<p class = caption>(Image courtesy of bitshare.cm)</p>
+		
+		<h2> SQL Injection </h2>
+
+		<h3>What is SQL Injection?</h3>
+			<p>SQL injection is one of many methods that hackers use to steal data from organizations. Malicious users can inject SQL commands into an SQL statement via web page input, and then gain unauthorized entry to the data within. They take advantage of improper coding of a web application which allows the hacker to inject SQL commands into, for example, a login form in order to gain access to the data held within the database. Basically, the problem of SQL injection arises because the fields used for user input allow SQL statements to be passed through and query the database directly.
+			</p>
+		<h3>Why is it a problem?</h3>
+			<p>SQL injection is one of the most common application layer attack techniques used today. Despite the increases in web security, SQL injection is still out there because of one simple reason: it works. And "hackers do what works". SQL injection is still considered an old reliable for attackers who are looking to break into corporate databases. SQL injection attacks generally yield very valuable paydirt. For example, a hacker, if successful in attempts to hack a retailer's database, may be able to pull the entire customer database full of customer's personal info, including credit card numbers!  </p>
+			<p>The problem is multi-faceted. For one thing, corporations are maintaining highly desirable targets in their databases. They keep all valuable information in one place. For another, many corporations utilize improper development planning and insecure development architecture. Another big issue is that developers and organizations are putting too much trust into their user input - "trust without verification is one key reason why SQL injection is still so prevalent," according to the chief technology officer for Tripwire. </p>
+
+		<h3>How can one combat this issue?</h3>
+			<p>There are a few different methods to combat SQL injection. Importantly, one must properly code one's application so that it treats user input data with care. As mentioned above, trusting user input without verification makes a database vulnerable to attacks. Sanitizing the input, i.e. restricting the type of input allowed, is one way to protect one's databases. This is achieved by examining the user input for certain illegal characters (the kind that hackers use in their SQL injection commands), and either rejecting such illegal input or removing the illegal characters. </p>
+			<p> Another important method to combat SQL injection is by following "the rule of least privilege" within application accounts. Database logins oftentimes grant complete administrator privileges, allowing for creation/deletion/augmentation of tables. Web applications don't need this level of access! And such a level access is a perfect setup for SQL injection attacks. By limiting access, one can limit the amount of potential damage. </p>
+
+		<h4>Resources:</h4>
+		<p> 
+		<ul>
+			<li><a href="https://www.acunetix.com/websitesecurity/sql-injection/" target="_blank">https://www.acunetix.com/websitesecurity/sql-injection/</a></li>
+			<li><a href="http://www.darkreading.com/application-security/database-security/10-reasons-sql-injection-still-works/d/d-id/1139702?" target="_blank">http://www.darkreading.com/application-security/database-security/10-reasons-sql-injection-still-works/d/d-id/1139702?</a></li>
+		</ul>
+		</p>
+
+		</section>
+
+		<footer>
+			<p>&copy; Jessica Tung</p>
+		</footer>
+
+	</article>
+	</body>	
+</html>
