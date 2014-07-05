@@ -1,0 +1,79 @@
+<head>
+		<title> Sorting </title>
+		<link rel="stylesheet" type="text/css" href= "stylesheets/blog_template.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<article>
+
+		<header>
+			<h1>Jessica's Dev Bootcamp Blog</h1>
+		</header>
+
+		<aside>
+			<p class="name">Jessica Tung</p>
+			<p class="sidebar_text">DBC - SF Mule Deer, July 2014</p>
+			<p class="sidebar_text">Oakland, California</p>
+		</aside>	
+
+		<section>
+		<p class="date">July 5, 2014</p>
+
+		<h2>Sorting Algorithms: Bubble Sort, Quicksort, and Merge Sort </h2>
+			<p>Sorting is the ordering of a list of objects. There are many types of internal sorting algorithms - the type of sorting which is done if the number of objects to be sorted is small enough to fit into the main memory (as opposed to external sorting algorithms). I will be going over 3 of the most common types: bubble sort, quicksort, and merge sort. 
+			</p>
+
+			<h3>Bubble Sort</h3>
+			<p>The bubble sort algorithm works by comparing each item against the item next to it, and swapping them if required. So, the largest element "bubbles up" to the top of the array, hence the name!</p>
+			<img src="http://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"/>
+			<p class = caption>(Image courtesy of Wikimedia Commons)</p>
+			<p>So, broken down then:
+			<ol>
+				<li>Compare the first two items in the list.</li>
+				<li>If the first item is greater, swap the items.</li>
+				<li>Now compare the second and third items in the same manner.</li>
+				<li>Continue until you get to the end of the list.</li>
+				<li>Repeat process n times, n being the length of your list.</li>
+			</ol>
+
+			</p>
+
+			<h3>Quicksort</h3>
+			<p>The quicksort algorithm employs a divide and conquer algorithm. It first divides a large array into two smaller sub-arrays, consisting of the low elements and the high elements. Quicksort can then recursively sort the sub-arrays.</p>
+			<img src="http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif"/>
+			<p class = caption>(Image courtesy of Wikimedia Commons)</p>
+			<p>The steps to a quicksort algorithm:
+			<ol>
+				<li>Choose any element of the array to be the pivot.</li>
+				<li>Divide all other elements (aside from the pivot) into two partitions:</li>
+					<ul>
+					<li>All elements less than the pivot go into the first partition</li>
+					<li>All elements greater than the pivot go into the second partition</li>
+					</ul>
+				<li>Use recursion to sort both partitions</li>
+				<li>Join the first sorted partition, the pivot, and the second partition.</li>
+			</ol>
+			</p>
+
+
+			<h3>Merge Sort</h3>
+			<p>Merge sort is another comparison based sorting algorithm that also uses a divide and conquer strategy to sort a list. You divide the list into the smallest unit (1 element), then compare each element with the adjacent list to sort and merge the two adjacent lists. Then, all the elements are sorted and merged.</p>
+			<img src="http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif"/>
+			<p class = caption>(Image courtesy of Wikimedia Commons)</p>
+			<p> Merge sort steps:
+			<ol>
+				<li>Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).</li>
+				<li>Repeatedly merge these sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be sorted list!</li>
+			</ol>
+			</p>
+
+		</section>
+
+		<footer>
+			<p>&copy; Jessica Tung</p>
+		</footer>
+
+	</article>
+	</body>	
+</html>
