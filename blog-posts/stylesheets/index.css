@@ -1,24 +1,24 @@
 /* stuff that affects the entire doc's format and appearance*/
 body{
-	font-family: arial;
-	background-image: url(images/tree_bark.png);
+	font-family:'Roboto', sans-serif;
+	background-image: url(images/crossword.png);
 }
 article {
 	width: 960px;
 	margin: auto;
 }
 
-a:link{color:fuchsia;}
+a:link{color: #95918C;}
 a:visited{color: #95918C;}
 a:hover{color:#A2ADD0;}
-a:active{color:teal;}
+a:active{color:#7366BD;}
 
 /* header stuff */
 
 header{
 	text-align: center;
-	color: fuchsia;
-	background-color: #A2ADD0;
+	color: #FBFBFB;
+	background-color: #9D81BA;
 	font-family: 'Playfair Display SC', serif;
 }
 
@@ -28,18 +28,21 @@ aside{
 	float: left;
 	max-width: 30%;
 	font-size: 14px;
+	margin: 20px;
 }
 
 #profile_pic{
 	display:  block;
 	margin-left: auto;
 	margin-right: auto;
-	border: 4px fuchsia solid;
+	/*border: 4px fuchsia solid;*/
+	border-radius: 100%;
 }
 
 #name{
-	font-size:18px;
-	font-family: 'Lobster', cursive;
+	font-size: 20px;
+	font-family: 'Special Elite', cursive;
+	/*font-family: 'Playfair Display SC', serif;*/
 	font-weight: bold;
 	color: #7366BD;
 	text-align: center;
@@ -47,6 +50,16 @@ aside{
 
 .sidebar_text{
 	color: #9D81BA;
+	text-align: center;
+}
+
+.social{
+  float: left;
+ /*text-align: center;*/
+ /* margin: 5px 15px 5px 0;*/
+  margin: 5px 5px 5px;
+  margin-top: 30px;
+
 }
 
 
@@ -79,7 +92,7 @@ p{
 footer{
 	clear:both;
 	text-align: center;
-	border-top: 6px solid fuchsia;
+	border-top: 5px solid #9D81BA;
 }
 
 /* Week2 specific formatting*/
