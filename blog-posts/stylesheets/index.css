@@ -42,7 +42,6 @@ aside{
 #name{
 	font-size: 20px;
 	font-family: 'Special Elite', cursive;
-	/*font-family: 'Playfair Display SC', serif;*/
 	font-weight: bold;
 	color: #7366BD;
 	text-align: center;
@@ -55,8 +54,6 @@ aside{
 
 .social{
   float: left;
- /*text-align: center;*/
- /* margin: 5px 15px 5px 0;*/
   margin: 5px 5px 5px;
   margin-top: 30px;
 
@@ -95,7 +92,7 @@ footer{
 	border-top: 5px solid #9D81BA;
 }
 
-/* Week2 specific formatting*/
+/* Other */
 
 .caption{
 	font-size: 12px;
